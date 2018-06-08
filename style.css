@@ -1,0 +1,288 @@
+/*
+ * Created by jub on 06.12.2017.
+/*----------------------------------------------------------------
+        General Styling
+----------------------------------------------------------------*/
+html {
+    --black1c-color: #1c1c1c;
+    --black21-color: #212121;
+    --black2d-color: #2d2d2d;
+    --black33-color: #333333;
+    --black3e-color: #3e3e3e;
+    --black77-color: #777777;
+
+    --child1-color:#E74F4F;
+    --child2-color:#6bd2db;
+    --child3-color:#9ed670;
+    --child4-color:#EC732D;
+    --child6-color:#ffbe4f;
+    --child7-color:#E36290;
+
+    --shadow1-color: rgba(0,0,0,.1);
+    --shadow25-color: rgba(0,0,0,.25);
+    --shadow3-color: rgba(0,0,0,.3);
+    --shadow35-color: rgba(0,0,0,.35);
+    --shadow5-color: rgba(0,0,0,.5);
+    --shadow6-color: rgba(0,0,0,.6);
+    --shadow75-color: rgba(0,0,0,.75);
+    --spacing: .25em;
+    --text-color: #777;
+    --label-width: 160px;
+    --label-width: 8ch;
+
+    min-height: 100%;
+    background: var(--black21-color);
+}
+
+body {
+    height:100%;
+    background: linear-gradient(var(--black33-color),var(--black21-color));
+    background-repeat:no-repeat !important;
+    color: #bbb;
+    margin: 0 0 84px;
+}
+
+.spacer_top {
+    height: 70px;
+}
+
+/*----------------------------------------------------------------
+        General Styling
+----------------------------------------------------------------*/
+
+
+/*----------------------------------------------------------------
+        Header Styling
+----------------------------------------------------------------*/
+header {
+    min-width: 30ch;
+    max-width: 133ch;
+    height: 158px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid  var(--shadow1-color);
+    box-shadow: 0 0px 20px 0px var(--shadow5-color);
+    transition: box-shadow 300ms;
+}
+
+header:before {
+    border: 2px solid var(--shadow25-color);
+    box-shadow: 0 0px 8px 0px var(--shadow35-color);
+}
+
+header:hover {
+    box-shadow: 0 0 25px 0px var(--shadow5-color);
+}
+
+#header_top {
+    height: 26px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#header_mid {
+    margin-left: var(--spacing);
+    margin-right: var(--spacing);
+
+}
+
+/*----------------------------------------------------------------
+        Header Styling
+----------------------------------------------------------------*/
+
+
+/*----------------------------------------------------------------
+        Form Styling
+----------------------------------------------------------------*/
+/*------------------------------------------------------
+        Searchbox
+------------------------------------------------------*/
+#searchbox {
+    min-width: 12ch;
+    margin: auto;
+    text-align: center;
+}
+
+#search_input {
+    min-width: 15ch;
+    width: 80%;
+    max-width: 800px;
+    height: 35px;
+    margin: auto;
+
+}
+
+/*------------------------------------------------------
+        Searchbox
+------------------------------------------------------*/
+input[type='text'] {
+    background: var(--black33-color);
+    color: var(--shadow25-color);
+    padding: 5px;
+    font-size: 2em;
+    text-align: center;
+    border: 2px solid var(--shadow3-color);
+    -webkit-font-smoothing: antialiased;
+    box-shadow: 0 0 8px 0 var(--shadow25-color);
+    transition: border 300ms, box-shadow 500ms, border-radius 300ms;
+
+}
+
+input[type='text']:hover {
+    border: 2px solid var(--shadow35-color);
+    box-shadow: 0 0 13px 0 var(--shadow35-color);
+    transition: border 300ms, box-shadow 500ms;
+
+}
+
+input[type='text']:focus {
+    outline: none;
+    color: var(--black1c-color);
+    border: 2px solid var(--black1c-color);
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    box-shadow: 0 0 18px 0 var(--shadow5-color);
+    transition: border 300ms, box-shadow 300ms, border-radius 300ms;
+}
+
+/*----------------------------------------------------------------
+        Form Styling
+----------------------------------------------------------------*/
+
+
+/*----------------------------------------------------------------
+        Pages Styling
+----------------------------------------------------------------*/
+.backboard {
+    margin: -96px var(--spacing) 0px;
+}
+
+.pagecontent {
+    position: relative;
+    font-family: 'Varela Round', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-align: justify;
+    background: linear-gradient(var(--black3e-color),var(--black2d-color));
+    height: auto;
+    min-width: 44ch;
+    max-width: 100ch;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    overflow: hidden;
+    box-shadow: 0 0 20px 0 var(--shadow5-color);
+    transition: box-shadow 500ms ease;
+}
+
+.pagecontent:hover {
+    box-shadow: 0 0 25px 0 var(--shadow6-color);
+    transition: box-shadow 500ms ease;
+
+}
+
+.pagecontentspacing {
+    margin: 34px 48px 34px;
+}
+
+/*----------------------------------------------------------------
+        Pages Styling
+----------------------------------------------------------------*/
+
+
+/*----------------------------------------------------------------
+        Dashboard
+----------------------------------------------------------------*/
+#dashboard {
+    color: var(--text-color);
+    display: inline-block;
+    font-size: 2em;
+    text-align: left;
+    transition: color 200ms;
+}
+
+.category {
+    width: 100%;
+    display: flex;
+    position: relative;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.category:not(:first-child) {
+    margin-top: 8px;
+}
+
+.label {
+    width: var(--label-width);
+}
+
+.links {
+    width: 100%;
+    max-width: calc(100% - var(--label-width));
+    border-left: 2px solid;
+    transition: border-left 300ms;
+}
+
+.links:hover {
+    border-left: 4px solid;
+    transition: border-left 200ms;
+}
+
+a {
+    color: var(--text-color);
+    margin-left: 20px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 200ms;
+}
+
+a:hover {
+    color:inherit;
+    transition: color 150ms;
+}
+
+/* Media */
+.category:nth-child(1) {
+    color: var(--child1-color);
+}
+
+/* Social */
+.category:nth-child(2) {
+    color: var(--child2-color);
+}
+
+/* Games */
+.category:nth-child(3) {
+    color: var(--child3-color);
+}
+
+/* Reddit */
+.category:nth-child(4) {
+    color: var(--child4-color);
+}
+
+/* Code */
+.category:nth-child(5) {
+    color: var(--black1c-color);
+}
+
+/* Banking */
+.category:nth-child(6) {
+    color: var(--child6-color);
+}
+
+/* Misc */
+.category:nth-child(7) {
+    color: var(--child7-color);
+}
+
+/*----------------------------------------------------------------
+        Dashboard
+----------------------------------------------------------------*/
