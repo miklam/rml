@@ -1,6 +1,6 @@
-This is my first try of a startpage.
+This is my first try to make a startpage.
 
-Take a look at it here: https://miklam.github.io/teststartpage/
+Take a look at it here: https://miklam.github.io/rml/
 
 
 
